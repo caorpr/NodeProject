@@ -19,7 +19,6 @@ template <class Type>
 CTECArray<Type>::~CTECArray()
 {
 	// TODO Auto-generated destructor stub
-
 }
 
 template <class Type>
@@ -59,5 +58,24 @@ Type* CTECArray<Type> :: get(int position)
 template <class Type>
 void CTECArray<Type> :: set(int position, Type value)
 {
-
+	if(position >= size || position < 0)
+	{
+			// Out of bounds! OB!
+		cerr << "position is OB (out of bounds)!" << endl;
+	}
+	else
+	{
+		ArrayNode<Type> * current = head;
+		for (int spot = 0; spot < position; spot++)
+		{
+			if (spot != position)
+			{
+				current = current->getNext();
+			}
+			else
+			{
+				current->setValue(value);
+			}
+		}
+	}
 }
