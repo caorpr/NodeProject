@@ -11,8 +11,15 @@ using namespace std;
 template <class Type>
 CTECArray<Type>::CTECArray(int size)
 {
-	// TODO Auto-generated constructor stub
 	this->size = size;
+	this->head = nullptr;
+
+	//Defensive code
+	if(size <= 0)
+	{
+		cerr << "Not allowed scrub!" << endl;
+		return;
+	}
 }
 
 template <class Type>
