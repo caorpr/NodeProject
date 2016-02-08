@@ -8,7 +8,7 @@
 #include "CTECArray.h"
 using namespace std;
 
-template <class Type>
+template<class Type>
 CTECArray<Type>::CTECArray(int size)
 {
 	this->size = size;
@@ -17,18 +17,48 @@ CTECArray<Type>::CTECArray(int size)
 	//Defensive code
 	if(size <= 0)
 	{
-		cerr << "Not allowed scrub!" << endl;
+		cerr << "Not allowed coding newbie!" << endl;
 		return;
+	}
+
+	for (int index = 0; index < size; index++)
+	{
+		if(head != nullptr)
+		{  //Regular ArrayNodes are being made.
+			ArrayNode<Type> nextNode;
+			nextNode.setNext(head);
+			this->head = &nextNode;
+		}
+		else
+		{  //The first ArrayNode needs to be made;
+			ArrayNode<Type> firstNode;
+			this->head = &firstNode;
+		}
 	}
 }
 
 template <class Type>
 CTECArray<Type>::~CTECArray()
 {
-	// TODO Auto-generated destructor stub
+	ArrayNode<Type> * deleteMe = head;
+	for(int index = 0; index < size; index++)
+	{
+		if(deleteMe->getNext() != nullptr)
+		{
+			head = deleteMe->getNext();
+			deleteMe-setNext(nullptr);
+			delete deleteMe;
+			deleteMe = head;
+		}
+
+			delete deleteMe;
+			deleteMe = head;
+	}
+
+	delete head;
 }
 
-template <class Type>
+template<class Type>
 int CTECArray<Type> :: getSize()
 {
 	return this->size;

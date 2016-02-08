@@ -8,7 +8,7 @@
 #ifndef NODE_H_
 #define NODE_H_
 
-
+#include <iostream>
 
 template <class Type>
 class Node
