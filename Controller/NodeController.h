@@ -7,10 +7,10 @@
 
 #ifndef NODECONTROLLER_H_
 #define NODECONTROLLER_H_
-#include "../Model/Node.h"
+
 #include "../Model/Node.cpp"
-#include "../Model/ArrayNode.h"
 #include "../Model/ArrayNode.cpp"
+#include "../Model/CTECArray.cpp"
 #include <string>
 #include <iostream>
 
@@ -19,8 +19,7 @@ using namespace std;
 class NodeController
 {
 private:
-	Node<string> stringNode;
-	Node<int> intNode;
+	CTECArray<int> * notHipster;
 public:
 	NodeController();
 	virtual ~NodeController();

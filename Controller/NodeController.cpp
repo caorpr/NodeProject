@@ -12,25 +12,26 @@ using namespace std;
 
 NodeController::NodeController()
 {
-	stringNode.setValue("asssd");
-	intNode.setValue(999);
-
-	stringArrayNode.setValue("WERREDFD");
-	otherArrayNode.setValue("linked node");
-	stringArrayNode.setNext(&otherArrarayNode);
+	notHipster = new CTECArray<int>(5);
 }
 
 NodeController::~NodeController()
 {
-
+	//TODO
 }
 
 
 void NodeController :: start()
 {
-	cout << "The contents of the StringNode are" << stringNode.getValue() << endl;
-	cout << "The contents of the stringArrayNode are:" << stringArrayNode.getValue() << endl;
-	cout << "This is connected to stringArrayNode" << (*stringArrayNode.getNext()).getValue() << endl;
+	for(int index = 0; index < notHipster->getSize(); index++)
+	{
+		notHipster->set(index, (index * 23));
+	}
+
+	for(int index = notHipster->getSize()-1; index >= 0; index --)
+	{
+		cout<< "The contents of notHipster " << index << " are: " << notHipster->get(index) << endl;
+	}
 }
 
 
