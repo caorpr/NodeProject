@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.1.1">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>100</x>
+      <y>80</y>
+      <w>410</w>
+      <h>290</h>
+    </coordinates>
+    <panel_attributes>nodeProject.Model::Node&lt;Type&gt;
+--
+data members
+--
+constructors and methods</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
