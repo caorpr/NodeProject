@@ -10,6 +10,7 @@
 
 using namespace std;
 
+
 template<class Type>
 CTECArray<Type>::CTECArray(int size)
 {
@@ -35,6 +36,7 @@ CTECArray<Type>::CTECArray(int size)
 	}
 }
 
+
 template <class Type>
 CTECArray<Type>::~CTECArray()
 {
@@ -56,12 +58,12 @@ CTECArray<Type>::~CTECArray()
 	delete head;
 }
 
+
 template<class Type>
 int CTECArray<Type> :: getSize()
 {
 	return this->size;
 }
-
 template<class Type>
 Type CTECArray<Type> :: get(int position)
 {
@@ -82,7 +84,6 @@ Type CTECArray<Type> :: get(int position)
 		}
 	}
 }
-
 template <class Type>
 void CTECArray<Type> :: set(int position, const Type& value)
 {
@@ -102,4 +103,3 @@ void CTECArray<Type> :: set(int position, const Type& value)
 		}
 	}
 }
-

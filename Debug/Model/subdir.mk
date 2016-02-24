@@ -6,17 +6,23 @@
 CPP_SRCS += \
 ../Model/ArrayNode.cpp \
 ../Model/CTECArray.cpp \
-../Model/Node.cpp 
+../Model/CTECList.cpp \
+../Model/Node.cpp \
+../Model/Timer.cpp 
 
 OBJS += \
 ./Model/ArrayNode.o \
 ./Model/CTECArray.o \
-./Model/Node.o 
+./Model/CTECList.o \
+./Model/Node.o \
+./Model/Timer.o 
 
 CPP_DEPS += \
 ./Model/ArrayNode.d \
 ./Model/CTECArray.d \
-./Model/Node.d 
+./Model/CTECList.d \
+./Model/Node.d \
+./Model/Timer.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes

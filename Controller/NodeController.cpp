@@ -23,6 +23,7 @@ NodeController::~NodeController()
 
 void NodeController :: start()
 {
+	arrayTimer.startTimer();
 	for(int index = 0; index < notHipster->getSize(); index++)
 	{
 		notHipster->set(index, (index * 23));
@@ -32,6 +33,9 @@ void NodeController :: start()
 	{
 		cout<< "The contents of notHipster " << index << " are: " << notHipster->get(index) << endl;
 	}
+
+	arrayTimer.stopTimer();
+	arrayTimer.displayTimerInformation();
 }
 
 
