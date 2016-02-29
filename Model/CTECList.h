@@ -22,16 +22,16 @@ public:
 	CTECList();
 	virtual ~CTECList
 	int getSize();
-	void addToFtont();
-	void addToEnd();
-	void addAtIndex();
+	void addToFront(const Type& value);
+	void addToEnd(const Type& value);
+	void addAtIndex(int index, const Type& value);
 	Type getFront();
 	Type getEnd();
 	Type getFromIndex(int index);
 	Type removeFromFront();
 	Type removeFromEnd();
 	Type removeFromIndex(int index);
-	Type set();
+	Type set(int index, const Type& value);
 
 
 
