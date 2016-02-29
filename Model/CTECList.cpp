@@ -29,14 +29,6 @@ Type CTECList<Type>::~CTECList()
 template<class Type>
 Type CTECList<Type> :: removeFromFront()
 {
-
-
-
-}
-
-template<class Type>
-Type CTECList<Type> :: removeFromIndex(int index)
-{
 	assert(this->size > 0);
 
 	//Declare a variable of the type to return.
@@ -54,6 +46,40 @@ Type CTECList<Type> :: removeFromIndex(int index)
 	size--;
 
 	return thingToRemove;
+
+this->calculateSize();
+}
+
+template<class Type>
+Type CTECList<Type> :: removeFromIndex(int index)
+{
+	assert(this->size > 0);
+
+	assert(index >= 0 && index < size);
+
+	Type thingToRemove;
+
+	ArrayNode<Type> * previous, deleteMe, newNext;
+
+	if (index == 0)
+	{
+		thingToRemove = removeFromEnd();
+	}
+	else if (index == size -1)
+	{
+		thingToRemove = removeFromEnd();
+	}
+	else
+	{
+		ArrayNode<Type> * current = head;
+		for (int spot = 0; spot < index +1; spot++)
+		{
+			if(spot == index -1)
+			{
+				previous = current;
+			}
+		}
+	}
 }
 
 
