@@ -11,6 +11,7 @@
 
 template<class Type>
 CTECList<Type>::CTECList()
+
 {
 	this->size = 0;
 	this->head = nullptr;
@@ -34,7 +35,7 @@ Type CTECList<Type> :: removeFromFront()
 }
 
 template<class Type>
-Type CTECList<Type> :: removeFromIndex()
+Type CTECList<Type> :: removeFromIndex(int index)
 {
 	assert(this->size > 0);
 
@@ -50,9 +51,37 @@ Type CTECList<Type> :: removeFromIndex()
 	//Set head to the new head
 	this->head = newHead;
 
+	size--;
+
 	return thingToRemove;
 }
 
+
+
+
+template <class Type>
+void CTECList<Type> :: calculateSize()
+{
+	assert(size >= 0);
+
+	int count = 0;
+	if(head == nullptr)
+	{
+		size = count;
+	}
+	else
+	{
+		count++;
+		ArrayNode<Type> * current = head;
+		while(current->getNext() != nullptr)
+		{
+			count++;
+			current = current->getNext();
+		}
+		size = count;
+	}
+
+}
 
 
 
