@@ -21,6 +21,17 @@ private:
 public:
 	CTECList();
 	virtual ~CTECList
+	int getSize();
+	void addToFtont();
+	void addToEnd();
+	void addAtIndex();
+	Type getFront();
+	Type getEnd();
+	Type getFromIndex(int index);
+	Type removeFromFront();
+	Type removeFromEnd();
+	Type removeFromIndex(int index);
+	Type set();
 
 
 
