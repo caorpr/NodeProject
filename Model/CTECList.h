@@ -10,7 +10,7 @@
 
 #include "ArrayNode.h"
 
-template <classType>
+Model::CTECList<Type>
 class CTECList
 {
 private:
@@ -19,19 +19,19 @@ private:
 	int size;
 	void calculatedSize();
 public:
-	CTECList();
+	CTECList(): const
 	virtual ~CTECList
-	int getSize();
-	void addToFront(const Type& value);
-	void addToEnd(const Type& value);
-	void addAtIndex(int index, const Type& value);
-	Type getFront();
-	Type getEnd();
-	Type getFromIndex(int index);
-	Type removeFromFront();
-	Type removeFromEnd();
-	Type removeFromIndex(int index);
-	Type set(int index, const Type& value);
+	int getSize(): int
+	void addToFront(const Type& value): void
+	void addToEnd(const Type& value): void
+	void addAtIndex(int index, const Type& value): void
+	Type getFront(): Typy
+	Type getEnd(); Type
+	Type getFromIndex(int index); Type
+	Type removeFromFront(); Type
+	Type removeFromEnd(); Type
+	Type removeFromIndex(int index); Type
+	Type set(int index, const Type& value); Type
 
 
 
