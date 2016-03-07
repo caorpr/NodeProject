@@ -37,7 +37,7 @@ Type CTECList<Type> :: removeFromFront()
 	ArrayNode<Type> * newHead = new ArrayNode<Type>();
 	newHead = head->getNext();
 	//Get what the head is holding!!
-	thingtoRemove = this->head->getValue();
+	thingToRemove = this->head->getValue();
 	//Delete what head is pointing to
 	delete this->head;
 	//Set head to the new head
