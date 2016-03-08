@@ -14,13 +14,12 @@ template <class Type>
 class CTECList
 {
 private:
-	ArrayNode<Type> end;
-	ArrayNode<Type> head;
+	ArrayNode<Type> *end;
+	ArrayNode<Type> *head;
 	int size;
 	void calculatedSize();
 public:
 	CTECList();
-	virtual ~CTECList;
 	int getSize();
 	void addToFront(const Type& value);
 	void addToEnd(const Type& value);
