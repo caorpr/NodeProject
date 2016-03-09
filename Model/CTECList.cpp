@@ -18,10 +18,10 @@ CTECList<Type>::CTECList()
 	this->end = nullptr;
 }
 
+
 template<class Type>
 Type CTECList<Type>::~CTECList()
 {
-
 
 }
 
