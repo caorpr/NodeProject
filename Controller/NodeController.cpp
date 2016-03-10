@@ -13,12 +13,21 @@ using namespace std;
 NodeController::NodeController()
 {
 	notHipster = new CTECArray<int>(5);
+	numbers = new CTECList<int>();
 }
 
 NodeController::~NodeController()
 {
 	//TODO
 }
+
+void NodeController :: testLists()
+{
+	numbers->addToFront(3);
+	numbers->addToEnd(8);
+	cout << "End should be 8 and is: " << numbers->getEnd() << endl;
+}
+
 
 
 void NodeController :: start()
@@ -37,5 +46,4 @@ void NodeController :: start()
 	arrayTimer.stopTimer();
 	arrayTimer.displayTimerInformation();
 }
-
 

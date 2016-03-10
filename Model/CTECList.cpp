@@ -19,15 +19,82 @@ CTECList<Type>::CTECList()
 }
 
 
-template<class Type>
-Type CTECList<Type>::~CTECList()
-{
 
+
+
+
+template<class Type>
+void CTECList<Type>::addToFront(const Type& value)
+{
+	ArrayNode<Type> * newStuff = new ArrayNode<Type>(value, head);
+	head = newStuff;
+	if(size == 0)
+	{
+		end = head;
+	}
+}
+
+template<class Type>
+CTECList<Type>::~CTECList()
+{
+	ArrayNode<Type> * current = head;
+
+	for(int deleteCount = 0; deleteCount < size; deleteCount++)
+	{
+		ArrayNode<Type> * temp = current;
+
+		current = current->getNext();
+		head = current;
+		delete temp;
+	}
+
+	while(current->getNext() != nullptr)
+	{
+		ArrayNode<Type> * temp = current;
+
+		current = current->getNext();
+		head = current;
+		delete temp;
+	}
+
+	delete head;
+	head = nullptr;
+	end = nullptr;
+	size = 0;
 }
 
 
+
+
+
+
+
+
+
+
 template<class Type>
-Type CTECList<Type> :: removeFromFront()
+void CTECList<Type>::addToEnd(const Type& value)
+{
+	ArrayNode<Type> * newStuff;
+	if(end == nullptr)
+	{
+		addToFront(value);
+	}
+	else
+	{
+		newStuff = new ArrayNode<Type>(value);
+		end->setNext(newStuff);
+	}
+	end = newStuff;
+
+	calculateSize();
+}
+
+
+
+
+template<class Type>
+Type CTECList<Type>::removeFromFront()
 {
 	assert(this->size > 0);
 
@@ -48,6 +115,7 @@ Type CTECList<Type> :: removeFromFront()
 	return thingToRemove;
 
 this->calculateSize();
+
 }
 
 template<class Type>
