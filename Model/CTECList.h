@@ -15,10 +15,11 @@ class CTECList
 {
 private:
 	ArrayNode<Type> *end;
-	ArrayNode<Type> *head;
+	ArrayNode<int> * head;
 	int size;
 	void calculateSize();
 public:
+	~CTECList();
 	CTECList();
 	int getSize();
 	void addToFront(const Type& value);
@@ -29,8 +30,6 @@ public:
 	Type getFromIndex(int index);
 	Type removeFromFront();
 	Type removeFromEnd();
-	Type removeFromIndex(int index);
-	Type set(int index, const Type& value);
 	Type removeFromIndex(int index);
 	Type set(int index, const Type& value);
 };

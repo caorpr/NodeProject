@@ -7,6 +7,9 @@
 
 #include "CtecList.h"
 #include <assert.h>
+//#include <iostream>
+//#include<string>
+//using namespace std;
 
 
 template<class Type>

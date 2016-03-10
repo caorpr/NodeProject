@@ -11,6 +11,7 @@
 #include "../Model/Node.cpp"
 #include "../Model/ArrayNode.cpp"
 #include "../Model/CTECArray.cpp"
+#include "../Model/CTECList.cpp"
 #include "../Model/Timer.h"
 #include <string>
 #include <iostream>
