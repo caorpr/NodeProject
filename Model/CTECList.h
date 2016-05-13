@@ -14,13 +14,13 @@ template <class Type>
 class CTECList
 {
 private:
-	ArrayNode<Type> end;
-	ArrayNode<Type> head;
+	ArrayNode<Type> *end;
+	ArrayNode<int> * head;  //....got rid of errors.....?
 	int size;
-	void calculatedSize();
+	void calculateSize();
 public:
+	~CTECList();
 	CTECList();
-	virtual ~CTECList;
 	int getSize();
 	void addToFront(const Type& value);
 	void addToEnd(const Type& value);
@@ -32,8 +32,7 @@ public:
 	Type removeFromEnd();
 	Type removeFromIndex(int index);
 	Type set(int index, const Type& value);
-	Type removeFromIndex(int index);
-	Type set(int index, const Type& value);
+	int indexOf(Type searchValue);
 };
 
 void calculateSize();

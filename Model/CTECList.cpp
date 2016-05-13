@@ -27,21 +27,6 @@ CTECList<Type>::CTECList()
 
 
 
-void NodeController :: testLists()
-
-{
-
-	numbers->addToFront(9999);
-
-	numbers->addToEnd(56556);
-
-		cout << "End is 56556 and is: " << numbers->getEnd() << endl;
-
-	cout << "Head is 99999 and is: " << numbers->getFront() << endl;
-
-}
-
-
 
 template<class Type>
 Type CTECList<Type> :: removeFromFront()
@@ -64,7 +49,7 @@ Type CTECList<Type> :: removeFromFront()
 
 	return thingToRemove;
 
-this->calculatedSize();
+this->calculateSize();
 }
 
 template<class Type>
@@ -103,7 +88,7 @@ Type CTECList<Type> :: removeFromIndex(int index)
 
 
 template <class Type>
-void CTECList<Type> :: calculatedSize()
+void CTECList<Type> :: calculateSize()
 {
 	assert(size >= 0);
 
